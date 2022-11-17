@@ -22,7 +22,7 @@ names(r$coefficients) <- nc
 
 ``` 
 
-### Example 2: Panel Data Regression Model with Tenet Dataset
+### Example 2: Univariate Cross-Section Quantile Regression Model (Tenet Dataset)
 
 ```R
 
