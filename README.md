@@ -70,6 +70,12 @@ firm.data.newMTB.1   0.01098  0.08260    0.13289  0.89437
 
 ``` 
 
+# Bibliography
+
+- Croissant, Y., & Millo, G. (2018). Panel data econometrics with R. John Wiley & Sons.
+
+- Kleiber, C., & Zeileis, A. (2008). Applied econometrics with R. Springer Science & Business Media.
+
 
 # Acknowledgments
 
