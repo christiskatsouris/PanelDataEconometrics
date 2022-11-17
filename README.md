@@ -5,7 +5,7 @@ In this teaching page, we focus on estimation and inference methodologies for pa
 
 # Estimation and Inference Examples
 
-### Example 1: Panel Data Regression Model 
+### Example 1: Panel Data Regression Model with plm R package
 
 ```R
 
@@ -19,6 +19,54 @@ y  <- pmodel.response(x)
 r  <- lm(y ~ X - 1, model = FALSE)
 nc <- colnames(model.frame(r)$X)
 names(r$coefficients) <- nc
+
+``` 
+
+### Example 2: Panel Data Regression Model with Tenet Dataset
+
+```R
+
+dataset <- read.csv("100_firms_returns_and_macro_2015-04-15.csv", header = TRUE)
+
+returns <- as.matrix(dataset[, 2:101])    
+macro   <- as.matrix(dataset[, 102:108])
+
+firm.data <- read.csv(file = "Bal_sheet.csv")
+firm.data <- as.matrix(firm.data)
+
+# Take a subset of only 15 firms
+returns <- returns[ , 1:15]
+
+for (k in 1:15) 
+{
+  firm.data.new <- firm.data[ , 1:(4 * k)]
+}  
+
+ncol <- NCOL(firm.data.new)
+return.t   <- as.matrix( returns[2:314 ,1] )
+return.lag <- as.matrix( returns[1:313, 1] )
+
+## Step 1: Estimate Univariate Quantile Regression Models with covariates y_{t-1} and firm characteristics
+
+k <- 1
+firm.data.new <- firm.data[2:314 , (4 * k - 3):(4 * k)]
+model.quantile         <- rq( return.t  ~ return.lag + firm.data.new, tau = 0.05 )
+model.quantile.summary <- summary( model.quantile, se = "boot", bsmethod= "xy" )
+
+> model.quantile.summary
+
+Call: rq(formula = return.t ~ return.lag + firm.data.new, tau = 0.05)
+
+tau: [1] 0.05
+
+Coefficients:
+                    Value    Std. Error t value  Pr(>|t|)
+(Intercept)          0.25567  1.10568    0.23124  0.81728
+return.lag           0.10764  0.17216    0.62524  0.53228
+firm.data.newLEV.1  -0.05732  0.01896   -3.02379  0.00271
+firm.data.newMM.1    0.77781  0.54157    1.43622  0.15196
+firm.data.newSIZE.1  0.04860  0.02733    1.77802  0.07639
+firm.data.newMTB.1   0.01098  0.08260    0.13289  0.89437
 
 ``` 
 
