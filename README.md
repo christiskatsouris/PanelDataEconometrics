@@ -70,9 +70,9 @@ firm.data.newMTB.1   0.01098  0.08260    0.13289  0.89437
 
 ``` 
 
-### Example 3: Quantile Panel Data Regressions (Simulation Example)
+### Example 3: Quantile Panel Data Regressions (MC Simulation)
 
-Related reference to the following example, is the paper of Galvao, A., Lamarche, C., and Lima, L. R. (JASA, 2013).
+Reference to the following example, is the paper of Galvao, A., Lamarche, C., and Lima, L. R. (JASA, 2013).
 
 ```R
 
