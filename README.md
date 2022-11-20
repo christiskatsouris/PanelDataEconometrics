@@ -70,12 +70,71 @@ firm.data.newMTB.1   0.01098  0.08260    0.13289  0.89437
 
 ``` 
 
-### Example 3: Quantile Panel Data Regressions 
+### Example 3: Quantile Panel Data Regressions (Simulation Example)
+
+Related reference to the following example, is the paper of Galvao, A., Lamarche, C., and Lima, L. R. (JASA, 2013).
 
 ```R
 
+# Initialization of parameters
+#######################################################
+beta1 <- 10             # First slope
+beta2 <- -2             # Second slope
+beta  <- c(beta1,beta2) # Parameters of interest
+gamma <- 0.5          # Model with heteroskedastic errors
+Ci    <- -0.95        # Censoring point
+tau   <- 0.5          # Quantile of interest
+const <- 0.05         # Initial value for d in 3-step
+deltan <- const       # Initial value for c of 3-step
+Rep    <- 1000        # Number of repetitions
+#######################################################
 
+datagen <- function(n,t,beta1,beta2,gamma,Ci)
+{# begin-of-function
+ 	
+  s <- rep(1:n,rep(t,n))
+ 	X <-array(0,c(n*t,2))
+	
+ 	for (i in 1:(n*t))
+ 	{# begin-for-loop
+	  
+   		signal=0
+   		while (signal==0)
+   		{
+       		x<-rnorm(2)
+      		if (max(abs(x))<=2) 
+      		  {X[i,]<-x;signal=1}
+      }
+  }# end-for-loop
+ 	
+ 	# hist(X)
+ 	# hist(X1)
+ 	
+ 	X1  <- X[,1]
+  X2  <- X[,2]
+  X1s <- X1^2
+ 	X2s <- X2^2
+ 	X   <- cbind(X1,X2,X1s,X2s)
+  eta.aux <- rnorm(n)
+  medX    <- (X[,1]+X[,2])/2
+  eta     <- array(0,c(n,1))
+  eta[1]  <- eta.aux[1] + ( 1/sqrt(1) )*sum( medX[1:t] )
+  
+  for (k in 1:(n-1))
+  {
+   		eta[k+1]<-eta.aux[k+1]+(1/sqrt(1))*sum(medX[(k*t+1):((k+1)*t)])
+  }
+  
+  eta   <- rep(eta.aux,rep(t,n))
+  u     <- rnorm(n*t)
+  ystar <- eta + beta1*X1+ beta2*X2 + (1+gamma*(X1+X2+X1s+X2s))*u
+  y     <- replace(ystar, ystar < Ci, Ci)
+  delta <- 1-((y==Ci)*1)
+  
+  return(cbind(y,X,s,delta,ystar))
 
+}# end-of-function
+ 
 ``` 
 
 ## Key References: 
