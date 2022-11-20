@@ -70,7 +70,9 @@ firm.data.newMTB.1   0.01098  0.08260    0.13289  0.89437
 
 ``` 
 
+### Example 3: Quantile Panel Data Regressions 
 
+```R
 
 #############################################
 # Quantile Regression IV Panel Data Functions
@@ -181,7 +183,7 @@ colnames(bsehat) <- c("endog", "exog", rep("ie",n-1), "int")
 rownames(bsehat) <- c("beta", "se")
 bsehat
 
-
+``` 
 
 ## Key References: 
 
