@@ -129,9 +129,7 @@ y     <- replace(ystar, ystar < Ci, Ci)
 delta <- 1-((y==Ci)*1)
   
 return(cbind(y,X,s,delta,ystar))
-
-}# end-of-function
- 
+}# end-of-function 
 ``` 
 
 ## Key References: 
