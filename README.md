@@ -103,8 +103,8 @@ for (i in 1:(n*t))
      x <- rnorm(2)
      if (max(abs(x))<=2) 
        {X[i,]<-x;signal=1}
-    }# end-while-loop
- }# end-for-loop
+   }# end-while-loop
+}# end-for-loop
  	
 X1  <- X[,1]
 X2  <- X[,2]
