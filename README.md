@@ -80,11 +80,13 @@ firm.data.newMTB.1   0.01098  0.08260    0.13289  0.89437
 
 ## Key References: 
 
-$\textbf{[1]}$ Kato, K., Galvao Jr, A. F., & Montes-Rojas, G. V. (2012). Asymptotics for panel quantile regression models with individual effects. Journal of Econometrics, 170(1), 76-91.
+$\textbf{[1]}$ Galvao, A. F., Lamarche, C., & Lima, L. R. (2013). Estimation of censored quantile regression for panel data with fixed effects. Journal of the American Statistical Association, 108(503), 1075-1089.
 
-$\textbf{[2]}$ Lamarche, C. (2010). Robust penalized quantile regression estimation for panel data. Journal of Econometrics, 157(2), 396-408.
+$\textbf{[2]}$ Kato, K., Galvao Jr, A. F., & Montes-Rojas, G. V. (2012). Asymptotics for panel quantile regression models with individual effects. Journal of Econometrics, 170(1), 76-91.
 
-$\textbf{[3]}$ Harding, M., & Lamarche, C. (2009). A quantile regression approach for estimating panel data models using instrumental variables. Economics Letters, 104(3), 133-135.
+$\textbf{[3]}$ Lamarche, C. (2010). Robust penalized quantile regression estimation for panel data. Journal of Econometrics, 157(2), 396-408.
+
+$\textbf{[4]}$ Harding, M., & Lamarche, C. (2009). A quantile regression approach for estimating panel data models using instrumental variables. Economics Letters, 104(3), 133-135.
 
 
 # Bibliography
