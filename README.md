@@ -134,17 +134,19 @@ return(cbind(y,X,s,delta,ystar))
 
 ## Key References: 
 
-$\textbf{[1]}$ Galvao, A. F., Juhl, T., Montes-Rojas, G., & Olmo, J. (2018). Testing slope homogeneity in quantile regression panel data with an application to the cross-section of stock returns. Journal of Financial Econometrics, 16(2), 211-243.
+$\textbf{[1]}$ Zhu, X., Wang, W., Wang, H., & Härdle, W. K. (2019). Network quantile autoregression. Journal of econometrics, 212(1), 345-358.
 
-$\textbf{[2]}$ Härdle, W. K., Wang, W., & Yu, L. (2016). Tenet: Tail-event driven network risk. Journal of Econometrics, 192(2), 499-513.
+$\textbf{[2]}$ Galvao, A. F., Juhl, T., Montes-Rojas, G., & Olmo, J. (2018). Testing slope homogeneity in quantile regression panel data with an application to the cross-section of stock returns. Journal of Financial Econometrics, 16(2), 211-243.
 
-$\textbf{[3]}$ Galvao, A. F., Lamarche, C., & Lima, L. R. (2013). Estimation of censored quantile regression for panel data with fixed effects. Journal of the American Statistical Association, 108(503), 1075-1089.
+$\textbf{[3]}$ Härdle, W. K., Wang, W., & Yu, L. (2016). Tenet: Tail-event driven network risk. Journal of Econometrics, 192(2), 499-513.
 
-$\textbf{[4]}$ Kato, K., Galvao Jr, A. F., & Montes-Rojas, G. V. (2012). Asymptotics for panel quantile regression models with individual effects. Journal of Econometrics, 170(1), 76-91.
+$\textbf{[4]}$ Galvao, A. F., Lamarche, C., & Lima, L. R. (2013). Estimation of censored quantile regression for panel data with fixed effects. Journal of the American Statistical Association, 108(503), 1075-1089.
 
-$\textbf{[5]}$ Lamarche, C. (2010). Robust penalized quantile regression estimation for panel data. Journal of Econometrics, 157(2), 396-408.
+$\textbf{[5]}$ Kato, K., Galvao Jr, A. F., & Montes-Rojas, G. V. (2012). Asymptotics for panel quantile regression models with individual effects. Journal of Econometrics, 170(1), 76-91.
 
-$\textbf{[6]}$ Harding, M., & Lamarche, C. (2009). A quantile regression approach for estimating panel data models using instrumental variables. Economics Letters, 104(3), 133-135.
+$\textbf{[6]}$ Lamarche, C. (2010). Robust penalized quantile regression estimation for panel data. Journal of Econometrics, 157(2), 396-408.
+
+$\textbf{[7]}$ Harding, M., & Lamarche, C. (2009). A quantile regression approach for estimating panel data models using instrumental variables. Economics Letters, 104(3), 133-135.
 
 
 # Bibliography
